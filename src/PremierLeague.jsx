@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import PremierLeagueScores from "./PremierLeagueScores";
 
+const API_URL = '/scores';
+
 function PremierLeague() {
     const [data, setData] = useState([]);
+    const [error, setError] = useState([]);
 
     useEffect(()=>{
         fetchData();
@@ -10,15 +13,13 @@ function PremierLeague() {
 
     //Simulating data from API
     const fetchData = () => {
-      const scores = [
-          {id: 1 ,name: "CJ", B3up : 100, Uno: 92, FootbalDice: 78, Darts: 81 },
-          {id: 2 ,name: "GP", B3up : 90, Uno: 95, FootbalDice: 141, Darts: 100 },
-          {id: 3 ,name: "ST", B3up : 95, Uno: 92, FootbalDice: 100, Darts: 101 },
-          {id: 4 ,name: "VI", B3up : 85, Uno: 90, FootbalDice: 60, Darts: 80 }
-      ];
-    setData(scores);
-    }
-    
+     fetch(API_URL)
+      .then(response=>response.json())
+      .then(data=>setData(data))
+      .catch(error=>setError(error));
+    };
+ 
+
   return (
       <PremierLeagueScores
           data={data}/>

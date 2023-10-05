@@ -1,0 +1,40 @@
+{
+  "scores": [
+    {
+      "name": "CJ",
+      "scores": [{
+        "B3up": 85,
+        "Uno": 92,
+        "Footbal Dice": 78,
+        "Darts": 95
+      }]
+    },
+    {
+      "name": "GP",
+      "scores": [{
+        "B3up": 90,
+        "Uno": 88,
+        "Footbal Dice": 82,
+        "Darts": 91
+      }]
+    },
+    {
+      "name": "ST",
+      "scores": [{
+        "B3up": 88,
+        "Uno": 91,
+        "Footbal Dice": 79,
+        "Darts": 89
+      }]
+    },
+    {
+      "name": "VT",
+      "scores": [{
+        "B3up": 87,
+        "Uno": 90,
+        "Footbal Dice": 80,
+        "Darts": 92
+      }]
+    }
+  ]
+}
