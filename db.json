@@ -12,7 +12,7 @@
       "id": 2,
       "name": "GP",
       "B3up": "90",
-      "Uno": "88",
+      "Uno": "90",
       "FootballDice": "82",
       "Darts": "91"
     },
@@ -35,10 +35,10 @@
     {
       "id": 5,
       "name": "LM",
-      "B3up": "20",
+      "B3up": "80",
       "Uno": "30",
       "FootballDice": "40",
-      "Darts": "50"
+      "Darts": "10"
     }
   ]
 }

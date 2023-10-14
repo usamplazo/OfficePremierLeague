@@ -35,13 +35,26 @@ function PremierLeague() {
       .then(returnedItem => setData([...data, returnedItem]))
       .catch(error => setError(error + "  " + item.name + " " + item.B3up + " " + item.Uno + " " + item.FootballDice + " " + item.Darts));
     };
- 
+    
+    const handleUpdate = (updatedItem) => {
+      console.log('Updating user data! ' + updatedItem.id + " " + updatedItem.B3up + ' ' + updatedItem.Uno + ' ' + updatedItem.FootballDice + ' ' + updatedItem.Darts)
+      
+      const updateUrl = `${API_URL}/${updatedItem.id}`;
+      fetch(updateUrl,{
+        method: 'PUT',
+        headers,
+        body: JSON.stringify(updatedItem),
+      })
+        .then(() => setData(data.map(item=>item.id == updatedItem.id ? updatedItem : item)))
+        .catch(error=>setError(error));
+    };
 
   return (
       <PremierLeagueScores
           data={data}
           error={error}
           onCreate={handleCreate}
+          onUpdate={handleUpdate}
           />
   );
   }
