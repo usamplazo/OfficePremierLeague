@@ -1,40 +1,44 @@
 {
   "scores": [
     {
+      "id": 1,
       "name": "CJ",
-      "scores": [{
-        "B3up": 85,
-        "Uno": 92,
-        "Footbal Dice": 78,
-        "Darts": 95
-      }]
+      "B3up": "85",
+      "Uno": "92",
+      "FootballDice": "78",
+      "Darts": "95"
     },
     {
+      "id": 2,
       "name": "GP",
-      "scores": [{
-        "B3up": 90,
-        "Uno": 88,
-        "Footbal Dice": 82,
-        "Darts": 91
-      }]
+      "B3up": "90",
+      "Uno": "88",
+      "FootballDice": "82",
+      "Darts": "91"
     },
     {
+      "id": 3,
       "name": "ST",
-      "scores": [{
-        "B3up": 88,
-        "Uno": 91,
-        "Footbal Dice": 79,
-        "Darts": 89
-      }]
+      "B3up": "88",
+      "Uno": "91",
+      "FootballDice": "79",
+      "Darts": "89"
     },
     {
+      "id": 4,
       "name": "VT",
-      "scores": [{
-        "B3up": 87,
-        "Uno": 90,
-        "Footbal Dice": 80,
-        "Darts": 92
-      }]
+      "B3up": "87",
+      "Uno": "90",
+      "FootballDice": "80",
+      "Darts": "92"
+    },
+    {
+      "id": 5,
+      "name": "LM",
+      "B3up": "20",
+      "Uno": "30",
+      "FootballDice": "40",
+      "Darts": "50"
     }
   ]
 }
