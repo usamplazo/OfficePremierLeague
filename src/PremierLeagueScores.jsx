@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function PremierLeagueScores({data, onCreate, onUpdate, error}){
+export default function PremierLeagueScores({data, onCreate, onUpdate, onDelete, error}){
     const [formData, setFormData] = useState({id:'', name:'', B3up:'', Uno:'', FootballDice:'', Darts:''});
     const [editingId, setEditingId] = useState(null);
 
@@ -57,6 +57,7 @@ export default function PremierLeagueScores({data, onCreate, onUpdate, error}){
               {player.FootballDice} //
               {player.Darts} //
               <div><button onClick={() => handleEdit(player)}>Edit</button></div>
+              <div><button onClick={() => onDelete(player.id)}>Delete</button></div>
             </li>
           ))}
         </ul>

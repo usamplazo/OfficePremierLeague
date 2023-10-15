@@ -23,7 +23,7 @@ function PremierLeague() {
     };
 
     const handleCreate = (item) => {
-      console.log('add item: ${JSON.stringify(item)}')
+      console.log('Adding player: ${JSON.stringify(item)}')
       console.log("  " + item.name + " " + item.B3up + " " + item.Uno + " " + item.FootballDice + " " + item.Darts)
 
       fetch(API_URL, {
@@ -37,9 +37,10 @@ function PremierLeague() {
     };
     
     const handleUpdate = (updatedItem) => {
-      console.log('Updating user data! ' + updatedItem.id + " " + updatedItem.B3up + ' ' + updatedItem.Uno + ' ' + updatedItem.FootballDice + ' ' + updatedItem.Darts)
+      console.log(`Updating player data (ID:${updateUrl.id})!`)
       
       const updateUrl = `${API_URL}/${updatedItem.id}`;
+      
       fetch(updateUrl,{
         method: 'PUT',
         headers,
@@ -49,12 +50,26 @@ function PremierLeague() {
         .catch(error=>setError(error));
     };
 
+    const handleDelete = (playerToRemoveId) => {
+        console.log(`Deleting player data (ID:${playerToRemoveId})!`)
+
+        const playerToRemoveUrl = `${API_URL}/${playerToRemoveId}`;
+
+        fetch(playerToRemoveUrl,{
+          method:'DELETE',
+          headers
+        })
+        .then(() => setData(data.filter(player => player.id !== playerToRemoveId)))
+        .catch(error=> console.error('Error deleting player: ', error));
+    };
+
   return (
       <PremierLeagueScores
           data={data}
           error={error}
           onCreate={handleCreate}
           onUpdate={handleUpdate}
+          onDelete={handleDelete}
           />
   );
   }
